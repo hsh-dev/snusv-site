@@ -14,7 +14,10 @@
         @-moz-keyframes fadein {from {opacity: 0;}to {opacity: 1;}}
         @-webkit-keyframes fadein {from {opacity: 0;}to {opacity: 1;}}
         @-o-keyframes fadein {from {opacity: 0;}to {opacity: 1;}}
-
+        @keyframes fadeout {from {opacity: 1;}to {opacity: 0;}}
+        @-moz-keyframes fadeout {from {opacity: 1;}to {opacity: 0;}}
+        @-webkit-keyframes fadeout {from {opacity: 1;}to {opacity: 0;}}
+        @-o-keyframes fadeout {from {opacity: 1;}to {opacity: 0;}}
         body {
             margin:0;
             padding:0;
@@ -53,6 +56,10 @@
             width:100%;
             height: auto;
             text-align: center;
+            transition: all 1s;
+        }
+        .header .background:hover{
+            transform: translate(0,20%);
         }
         .header .background #image{
             height: 100%;
@@ -64,6 +71,7 @@
             margin-left:0;
             margin-right:0;
         }
+
 
         .header .top{
             display: grid;
@@ -214,7 +222,7 @@
         var imgNum = 0; 
         function showImage() {  
             var objImg = document.getElementById("image"); 
-            objImg.src = imgArray[imgNum]; 
+            objImg.src = imgArray[imgNum];
             setTimeout(showImage, 5000);
             if(imgNum == 4){
                 imgNum = 0;
