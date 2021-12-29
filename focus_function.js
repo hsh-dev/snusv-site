@@ -5,10 +5,12 @@ for (var i = 0; i < nav_list.length; i++) {
     nav_el.addEventListener('mouseover', function () {
         this.style.color = 'gray';
         document.getElementsByClassName("top")[0].style.backgroundColor = 'rgb(0,0,0,0.7)';
+        this.style.borderBottom = "4px solid gray";
     });
     nav_el.addEventListener('mouseout', function () {
         this.style.color = 'white';
         document.getElementsByClassName("top")[0].style.backgroundColor = '';
+        this.style.borderBottom = "0px";
     });
 }
 

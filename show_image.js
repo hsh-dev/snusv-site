@@ -10,6 +10,18 @@ if(state === "index"){
 else if(state === "about"){
     imgArray[0] = "image/about_image_1.jpeg";
 }
+else if(state === "archive"){
+    imgArray[0] = "image/archive_image_1.jpeg";
+}
+else if (state === "alumni") {
+    imgArray[0] = "image/alumni_image_1.jpeg";
+}
+else if(state === "apply"){
+    imgArray[0] = "image/apply_image_1.jpeg";
+}
+else if(state === "contact"){
+    imgArray[0] = "image/contact_image_1.jpeg";
+}
 img_count = imgArray.length;
 
 var img_num = 0;
