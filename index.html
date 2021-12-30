@@ -59,6 +59,16 @@
     </div>
     <div class="article" id="art">
         <h1>동아리 소개</h1>
+        <script>
+            var UserAgent = navigator.userAgent;
+            var mobile = (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null);
+            if(mobile){
+                document.write('<h2>mobile access</h2>');
+            }
+            else{
+                document.write('<h2>web access</h2>');
+            }
+        </script>
     </div>
     <div class="footer">
         <div class="bottom">
