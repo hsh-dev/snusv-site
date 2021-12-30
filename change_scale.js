@@ -53,5 +53,6 @@ function change_scale() {
 change_scale();
 // start when window resize
 window.onresize = function (event) {
+    closeList();
     change_scale();
 }
