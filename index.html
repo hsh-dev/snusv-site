@@ -10,11 +10,14 @@
     </script>
     <script>
         var state = 'index';
+        var list_on = false;
     </script>
     <link rel="stylesheet" href="main.css">
+
 </head>
 
 <body onload="showImage(); change_scale();" >
+
     <div class="header" id="head">
         <div class="background" id="back">
             <img src="image/main_image_1.jpeg" id = "image">
@@ -32,17 +35,19 @@
                 <a href="apply.html" id="nav4" class="nav_element">Apply</a>
                 <a href="contact.html" id="nav5" class="nav_element">Contact</a>
             </nav>
-            <div id="list_icon">
-                <i class="fas fa-list" onclick="
+            <div id="list_icon" onclick="
+                if(!list_on){
                     showList();
-                "></i>
+                }
+                else{closeList();}">
+                <i class="fas fa-list"></i>
             </div>
             <div id="list">
-                <p><a href="about.html" id="list1" class="list_element">About Us</a></p>
-                <p><a href="archive.html" id="list2" class="list_element">Archive</a></p>
-                <p><a href="alumni.html" id="list3" class="list_element">Alumni</a></p>
-                <p><a href="apply.html" id="list4" class="list_element">Apply</a></p>
-                <p><a href="contact.html" id="list5" class="list_element">Contact</a></p>
+                <p id = "list_content"><a href="about.html" id="list1" class="list_element">About Us</a></p>
+                <p id = "list_content"><a href="archive.html" id="list2" class="list_element">Archive</a></p>
+                <p id = "list_content"><a href="alumni.html" id="list3" class="list_element">Alumni</a></p>
+                <p id = "list_content"><a href="apply.html" id="list4" class="list_element">Apply</a></p>
+                <p id = "list_content"><a href="contact.html" id="list5" class="list_element">Contact</a></p>
             </div>
         </div>
         <div class="sentence" id="sentence_list">
@@ -52,7 +57,7 @@
         </div>
 
     </div>
-    <div class="article">
+    <div class="article" id="art">
         <h1>동아리 소개</h1>
     </div>
     <div class="footer">
