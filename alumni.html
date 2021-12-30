@@ -9,6 +9,7 @@
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <script>
         var state = 'alumni';
+        var list_on = false;
     </script>
     <link rel="stylesheet" href="main.css">
 </head>
@@ -32,10 +33,12 @@
                 <a href="apply.html" id="nav4" class="nav_element">Apply</a>
                 <a href="contact.html" id="nav5" class="nav_element">Contact</a>
             </nav>
-            <div id="list_icon">
-                <i class="fas fa-list" onclick="
+            <div id="list_icon" onclick="
+                if(!list_on){
                     showList();
-                "></i>
+                }
+                else{closeList();}">
+                <i class="fas fa-list"></i>
             </div>
             <div id="list">
                 <p><a href="about.html" id="list1" class="list_element">About Us</a></p>
@@ -51,7 +54,7 @@
         </div>
 
     </div>
-    <div class="article">
+    <div class="article" id = "art">
         <h1>동아리 소개</h1>
     </div>
     <div class="footer">
