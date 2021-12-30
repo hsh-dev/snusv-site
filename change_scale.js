@@ -15,13 +15,14 @@ var mobile = (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian
 function change_scale() {
     var innerWidth = window.innerWidth;
     if(mobile){
+        background.style.transform = 'none';
         nav.style.display = 'none';
         list_icon.style.display = 'block';
-        second.style.display = 'block';
+        second.style.display = 'none';
         image.style.marginTop = 0;
-        header.style.height = "60vh";
-        first.style.fontSize = "100%";
-        article.style.top = "60vh";
+        header.style.height = "40vh";
+        first.style.fontSize = "200%";
+        article.style.top = "40vh";
     }
     else{
         if (innerWidth <= "1200") {
